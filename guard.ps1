@@ -21,7 +21,8 @@ function Recover-Air-Manager{
 
 while (1){
     try{
-        Get-Process javaw -ErrorAction Stop;
+        Get-Date | Format-Table >> "air_manager.log";
+        Get-Process javaw -ErrorAction Stop | Format-Table >> "air_manager.log";
     }
     catch{
         Get-Date;
